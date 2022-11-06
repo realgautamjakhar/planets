@@ -82,14 +82,14 @@ const Planet = () => {
               }}
               initial={{ scale: 1 }}
               transition={{ repeat: Infinity, duration: 20 }}
-              src={`http://127.0.0.1:5173/${planetimg}`}
+              src={`../${planetimg}`}
               className="planet-img"
               alt=""
             />
             <img
               id="geo-image"
               className="surface-img hidden"
-              src={`http://127.0.0.1:5173/${geologyimage}`}
+              src={`../${geologyimage}`}
             />
           </section>
           <section className="planet-infos">
