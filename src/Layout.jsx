@@ -10,16 +10,16 @@ import { useState } from "react";
 import { useEffect } from "react";
 const PlanetsLi = () => {
   return (
-    <ul>
+    <motion.ul animate={{ x: 0 }} initial={{ x: 900 }}>
       {data.map((planet) => {
         let { name } = planet;
         return (
-          <motion.li whileHover={{ scale: 1.2, color: "#242ed6" }} key={name}>
+          <motion.li whileHover={{ scale: 1.3, y: 10 }} key={name}>
             <NavLink to={`/planet/${name}`}>{name}</NavLink>
           </motion.li>
         );
       })}
-    </ul>
+    </motion.ul>
   );
 };
 

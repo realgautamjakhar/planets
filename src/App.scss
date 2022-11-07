@@ -27,9 +27,12 @@ header{
                   font-size: 1.2rem;
                   font-family: 'Antonio', sans-serif;
                   a{
-                        color: white;
                         cursor: pointer;
+                        color: white;
                         text-decoration: none;
+                  }
+                  a:hover{
+                        color: #242ed6;
                   }
             }
       }
