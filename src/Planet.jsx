@@ -73,14 +73,17 @@ const Planet = () => {
 
   return (
     <>
-      <section className="planet">
+      <motion.section
+        animate={{ opacity: 1 }}
+        initial={{ opacity: 0 }}
+        className="planet"
+      >
         <section className="planet-info">
           <section className="planet-images">
             <motion.img
               animate={{
                 rotate: 360,
               }}
-              initial={{ scale: 1 }}
               transition={{ repeat: Infinity, duration: 20 }}
               src={`../${planetimg}`}
               className="planet-img"
@@ -98,48 +101,51 @@ const Planet = () => {
             <p>
               Source <a href={source}>Wiki</a>
             </p>
-            <button
+            <motion.button
+              whileHover={{ scale: 1.1 }}
               id="overview"
               className="active-button inactive-button"
               onClick={(e) => changeoption(e)}
             >
-              <span>01</span> Overview
-            </button>
-            <button
+              <span style={{ color: "hsl(240,6%,54%)" }}>01</span> Overview
+            </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.1 }}
               id="structure"
               className="inactive-button"
               onClick={(e) => changeoption(e)}
             >
-              <span>02</span> Structure
-            </button>
-            <button
+              <span style={{ color: "hsl(240,6%,54%)" }}>02</span> Structure
+            </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.1 }}
               id="surface"
               className="inactive-button"
               onClick={(e) => changeoption(e)}
             >
-              <span>03</span> Surface
-            </button>
+              <span style={{ color: "hsl(240,6%,54%)" }}>03</span> Surface
+            </motion.button>
           </section>
         </section>
         <section className="planet-stats">
-          <section className="stats-card ">
+          <motion.section whileHover={{ scale: 1.1 }} className="stats-card ">
             <h4>ROTATION TIME:</h4>
             <h3>{rotation}</h3>
-          </section>
-          <section className="stats-card">
+          </motion.section>
+          <motion.section whileHover={{ scale: 1.1 }} className="stats-card">
             <h4>REVOLUTION TIME:</h4>
             <h3>{revolution}</h3>
-          </section>
-          <section className="stats-card">
+          </motion.section>
+          <motion.section whileHover={{ scale: 1.1 }} className="stats-card">
             <h4>RADIUS:</h4>
             <h3>{radius}</h3>
-          </section>
-          <section className="stats-card">
+          </motion.section>
+          <motion.section whileHover={{ scale: 1.1 }} className="stats-card">
             <h4>AVERAGE TEMP:</h4>
             <h3>{temperature}</h3>
-          </section>
+          </motion.section>
         </section>
-      </section>
+      </motion.section>
     </>
   );
 };

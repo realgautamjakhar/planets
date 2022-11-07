@@ -8,6 +8,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineCloseSquare } from "react-icons/ai";
 import { useState } from "react";
 import { useEffect } from "react";
+import { animate } from "framer-motion";
 const PlanetsLi = () => {
   return (
     <motion.ul animate={{ x: 0 }} initial={{ x: 900 }}>
@@ -41,7 +42,7 @@ const Layout = () => {
     <>
       <main>
         <header className="header">
-          <h2>
+          <h2 className="logo">
             <NavLink to="/">THEPLANETS</NavLink>
           </h2>
           <section className="default-nav">

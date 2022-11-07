@@ -1,11 +1,12 @@
 import "./App.scss";
-import { Route } from "react-router-dom";
+import { Route, useLocation } from "react-router-dom";
 import { createBrowserRouter } from "react-router-dom";
-import { createRoutesFromElements } from "react-router-dom";
+import { createRoutesFromElements, Routes } from "react-router-dom";
 import Layout from "./Layout";
 import { RouterProvider } from "react-router-dom";
 import Planet from "./Planet";
 import Home from "./Home";
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
