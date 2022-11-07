@@ -186,9 +186,13 @@ header{
       border: none;
       color: #6f2ed6;
       font-size: 2rem;
+      cursor: pointer;
 }
 .menu-btn:hover{
-      background-color: #6f2ed6;
+      svg{
+            fill:#6f2ed6;
+      }
+      transition: all ease-in-out .3s;
 }
 
 // Media
@@ -226,6 +230,7 @@ header{
                   }
             }
             .close-btn{
+                  cursor: pointer;
                   position: absolute;
                   border: none;
                   top: 2%;
@@ -233,8 +238,14 @@ header{
                   background-color: transparent;
                   font-size: 3rem;
                   svg{
+                        fill: black;
+                  }
+            }
+            .close-btn:hover{
+                  svg{
                         fill: #6f2ed6;
                   }
+                  transition: all ease-in-out .3s;
             }
       }
       .planet{
